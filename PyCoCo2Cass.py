@@ -1,6 +1,11 @@
-#Written by R. Scharmen
+#Written by tazrog
 #Designed to save programs on the PC via cassette interface and load them in the CoCo.
+#Program still and develpment.
+#Use on your own risk. No guarantees.
+#For use on a Windows PC. Not tested on Linux or Mac.
 
+from comtypes import CLSCTX_ALL
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import wave
 import pyaudio
 from array import array
@@ -10,11 +15,26 @@ import keyboard
 import time
 from tqdm import tqdm
 
+frame_rate = 9600
 # Make sure directories are set up.
-BASE_DIR = os.path.expanduser('~\\Documents\\CoCo')
 
+if not os.path.exists("C:\\PyCoCo2Cass"):
+    os.makedirs("C:\\PyCoCo2Cass") 
+
+BASE_DIR = os.path.expanduser("C:\\PyCoCo2Cass")
 if not os.path.exists(BASE_DIR+"\\Programs"):
     os.makedirs(BASE_DIR+"\\Programs") 
+
+def sound():
+    devices = AudioUtilities.GetSpeakers()
+    interface = devices.Activate(
+        IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    volume = interface.QueryInterface(IAudioEndpointVolume)
+    #volume.GetMute()
+    #volume.GetMasterVolumeLevel()
+    #volume.GetVolumeRange()
+    #Set PC Sound to 55.
+    volume.SetMasterVolumeLevel(-9.0, None)
 
 def record():
     os.system('cls')
@@ -26,7 +46,7 @@ def record():
     fcnt = 0
     FORMAT=pyaudio.paInt16
     CHANNELS=1
-    RATE=9600
+    RATE=frame_rate
     CHUNK=1024
     RECORD_SECONDS=1
     wavitems = os.listdir(BASE_DIR+"\\Programs")
@@ -301,19 +321,40 @@ def list():
                     os.system('cls')
                     print ("INVALID SELECTION")
                     time.sleep(1)
-                    list()       
+                    list()    
+def settings():
+    os.system('cls')
+    print ("Settings")
+    print ("OPTIONS")   
+    print ("[1] Frame Rate")
+    print ("[2] Sound")
+    print ("")
+    print ("[99] Main Menu")
+    setinput=int(input(">>> "))    
+    if (setinput == 1):
+        os.system('cls')
+        print ("Current Recording Frame Rate is :")
+        frame_rate = input("Type in number recording frame rate: ")
+        frame_rate = int(frame_rate)
+        main()
+    else:
+        settings()
+
 
 def main():    
     #interface
+    sound()
     os.system('cls')
     print ("Welcome to CoCo Python tape player and recorder on PC.")    
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     print ("OPTIONS.")
     print ("")
+    
     print ("[1] Play")
     print ("[2] Record")
     print ("[3] List/Delete Programs")
+    #print ("[0] Settings")
     print ("")
     print ("[99] Quit")
     print ("")
@@ -326,7 +367,8 @@ def main():
             print ("INVALID OPTION [%s]"% x)
             time.sleep(1)
             main()
-        
+        #if (x == 0):
+           # settings()
         if (x == 1):
             playtape()        
         if (x == 2):
@@ -335,11 +377,10 @@ def main():
             list()
         if (x == 99):
             quit()
-
         else:
             os.system('cls')
             print ("INVALID OPTION")
-            print ("Please enter a valid option [%d]."% x)
+            print ("Not a valid option [%d]."% x)
             time.sleep (1)
             main()
 

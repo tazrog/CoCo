@@ -25,6 +25,7 @@ imports:
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
  &#8226;   <a href="#copyreg">copyreg</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
@@ -162,6 +163,7 @@ imports:
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pyaudio">pyaudio</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#pyi_rth_pkgutil.py">pyi_rth_pkgutil.py</a>
@@ -295,6 +297,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="'numpy.ctypeslib'"></a>
+  <a target="code" href="" type="text/plain"><tt>'numpy.ctypeslib'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#comtypes._npsupport">comtypes._npsupport</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="'pandas.core'"></a>
   <a target="code" href="" type="text/plain"><tt>'pandas.core'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -343,7 +356,8 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>Queue</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#keyboard">keyboard</a>
+    <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#keyboard">keyboard</a>
  &#8226;   <a href="#keyboard._generic">keyboard._generic</a>
  &#8226;   <a href="#keyboard._nixcommon">keyboard._nixcommon</a>
 
@@ -356,9 +370,15 @@ imported by:
   <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/__future__.py" type="text/plain"><tt>__future__</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
-    <a href="#keyboard">keyboard</a>
+    <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#keyboard">keyboard</a>
  &#8226;   <a href="#keyboard._canonical_names">keyboard._canonical_names</a>
  &#8226;   <a href="#keyboard._winkeyboard">keyboard._winkeyboard</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
 
   </div>
 
@@ -595,8 +615,12 @@ imported by:
   <a name="_ctypes"></a>
   <tt>_ctypes</tt> <span class="moduletype"><tt>C:\Users\roger\AppData\Local\Programs\Python\Python312\DLLs\_ctypes.pyd</tt></span>  <div class="import">
 imported by:
-    <a href="#ctypes">ctypes</a>
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#ctypes.macholib.dyld">ctypes.macholib.dyld</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
 
   </div>
 
@@ -1269,7 +1293,8 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>_winreg</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#platform">platform</a>
+    <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#platform">platform</a>
 
   </div>
 
@@ -1355,6 +1380,8 @@ imported by:
   <tt>array</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
  &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
  &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
@@ -1396,6 +1423,7 @@ imported by:
   <tt>atexit</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
     <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
  &#8226;   <a href="#keyboard._nixcommon">keyboard._nixcommon</a>
  &#8226;   <a href="#keyboard._winkeyboard">keyboard._winkeyboard</a>
  &#8226;   <a href="#logging">logging</a>
@@ -1514,6 +1542,17 @@ imported by:
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="cStringIO"></a>
+  <a target="code" href="" type="text/plain"><tt>cStringIO</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
 
   </div>
 
@@ -1712,6 +1751,7 @@ imported by:
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#dis">dis</a>
  &#8226;   <a href="#email.feedparser">email.feedparser</a>
@@ -1730,6 +1770,10 @@ imported by:
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#pprint">pprint</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#selectors">selectors</a>
  &#8226;   <a href="#shlex">shlex</a>
@@ -1898,6 +1942,798 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="comtypes"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/__init__.py" type="text/plain"><tt>comtypes</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#atexit">atexit</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes._memberspec">comtypes._memberspec</a>
+ &#8226;   <a href="#comtypes._meta">comtypes._meta</a>
+ &#8226;   <a href="#comtypes._npsupport">comtypes._npsupport</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
+ &#8226;   <a href="#comtypes.patcher">comtypes.patcher</a>
+ &#8226;   <a href="#comtypes.server">comtypes.server</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes._CData">ctypes._CData</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes._memberspec">comtypes._memberspec</a>
+ &#8226;   <a href="#comtypes._meta">comtypes._meta</a>
+ &#8226;   <a href="#comtypes._npsupport">comtypes._npsupport</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
+ &#8226;   <a href="#comtypes.patcher">comtypes.patcher</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+ &#8226;   <a href="#comtypes.server">comtypes.server</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.tools.typedesc_base">comtypes.tools.typedesc_base</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.GUID"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/GUID.py" type="text/plain"><tt>comtypes.GUID</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes._comobject"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/_comobject.py" type="text/plain"><tt>comtypes._comobject</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#Queue">Queue</a>
+ &#8226;   <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes._memberspec"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/_memberspec.py" type="text/plain"><tt>comtypes._memberspec</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes._meta"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/_meta.py" type="text/plain"><tt>comtypes._meta</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes._npsupport"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/_npsupport.py" type="text/plain"><tt>comtypes._npsupport</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#'numpy.ctypeslib'">'numpy.ctypeslib'</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#numpy">numpy</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes._safearray"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/_safearray.py" type="text/plain"><tt>comtypes._safearray</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.automation"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/automation.py" type="text/plain"><tt>comtypes.automation</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#array">array</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.patcher">comtypes.patcher</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._memberspec">comtypes._memberspec</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/__init__.py" type="text/plain"><tt>comtypes.client</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.server">comtypes.server</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client._code_cache"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/_code_cache.py" type="text/plain"><tt>comtypes.client._code_cache</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#types">types</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client._constants"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/_constants.py" type="text/plain"><tt>comtypes.client._constants</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#keyword">keyword</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client">comtypes.client</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client._events"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/_events.py" type="text/plain"><tt>comtypes.client._events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client">comtypes.client</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client._generate"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/_generate.py" type="text/plain"><tt>comtypes.client._generate</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#_winreg">_winreg</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#importlib">importlib</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#winreg">winreg</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client.dynamic"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/dynamic.py" type="text/plain"><tt>comtypes.client.dynamic</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.client.lazybind"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/client/lazybind.py" type="text/plain"><tt>comtypes.client.lazybind</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.connectionpoints"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/connectionpoints.py" type="text/plain"><tt>comtypes.connectionpoints</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client._events">comtypes.client._events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.errorinfo"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/errorinfo.py" type="text/plain"><tt>comtypes.errorinfo</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes._comobject">comtypes._comobject</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.gen"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/gen/__init__.py" type="text/plain"><tt>comtypes.gen</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.hresult"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/hresult.py" type="text/plain"><tt>comtypes.hresult</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.messageloop"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/messageloop.py" type="text/plain"><tt>comtypes.messageloop</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.patcher"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/patcher.py" type="text/plain"><tt>comtypes.patcher</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.persist"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/persist.py" type="text/plain"><tt>comtypes.persist</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.safearray"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/safearray.py" type="text/plain"><tt>comtypes.safearray</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#array">array</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.patcher">comtypes.patcher</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.automation">comtypes.automation</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.server"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/server/__init__.py" type="text/plain"><tt>comtypes.server</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.tools"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/tools/__init__.py" type="text/plain"><tt>comtypes.tools</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.tools.typedesc_base">comtypes.tools.typedesc_base</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.tools.codegenerator"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/tools/codegenerator.py" type="text/plain"><tt>comtypes.tools.codegenerator</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#cStringIO">cStringIO</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#keyword">keyword</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#textwrap">textwrap</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.tools.tlbparser"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/tools/tlbparser.py" type="text/plain"><tt>comtypes.tools.tlbparser</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes._CData">ctypes._CData</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.tools.typedesc"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/tools/typedesc.py" type="text/plain"><tt>comtypes.tools.typedesc</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.typedesc_base">comtypes.tools.typedesc_base</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.tools.typedesc_base"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/tools/typedesc_base.py" type="text/plain"><tt>comtypes.tools.typedesc_base</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.tools">comtypes.tools</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.typeinfo"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/comtypes/typeinfo.py" type="text/plain"><tt>comtypes.typeinfo</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes._CData">ctypes._CData</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="contextlib"></a>
   <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/contextlib.py" type="text/plain"><tt>contextlib</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -1921,6 +2757,10 @@ imported by:
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._adapters">importlib.resources._adapters</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tqdm.std">tqdm.std</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -2022,6 +2862,7 @@ imported by:
 <span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#ctypes._CData">ctypes._CData</a>
  &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#nt">nt</a>
  &#8226;   <a href="#os">os</a>
@@ -2033,6 +2874,29 @@ imports:
   <div class="import">
 imported by:
     <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes._memberspec">comtypes._memberspec</a>
+ &#8226;   <a href="#comtypes._meta">comtypes._meta</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
+ &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
+ &#8226;   <a href="#comtypes.server">comtypes.server</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
  &#8226;   <a href="#ctypes._aix">ctypes._aix</a>
  &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#ctypes.macholib">ctypes.macholib</a>
@@ -2041,7 +2905,31 @@ imported by:
  &#8226;   <a href="#keyboard._darwinkeyboard">keyboard._darwinkeyboard</a>
  &#8226;   <a href="#keyboard._winkeyboard">keyboard._winkeyboard</a>
  &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audioclient.depend">pycaw.api.audioclient.depend</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ctypes._CData"></a>
+  <a target="code" href="" type="text/plain"><tt>ctypes._CData</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
 
   </div>
 
@@ -2194,7 +3082,21 @@ imports:
   <div class="import">
 imported by:
     <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#comtypes._safearray">comtypes._safearray</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
+ &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
  &#8226;   <a href="#keyboard._winkeyboard">keyboard._winkeyboard</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audioclient.depend">pycaw.api.audioclient.depend</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
 
   </div>
 
@@ -2239,8 +3141,10 @@ imports:
 imported by:
     <a href="#_strptime">_strptime</a>
  &#8226;   <a href="#calendar">calendar</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
+ &#8226;   <a href="#psutil">psutil</a>
  &#8226;   <a href="#tqdm.std">tqdm.std</a>
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
@@ -2259,7 +3163,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#fractions">fractions</a>
+    <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#statistics">statistics</a>
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
@@ -2283,6 +3188,17 @@ imports:
   <div class="import">
 imported by:
     <a href="#inspect">inspect</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="dummy_threading"></a>
+  <a target="code" href="" type="text/plain"><tt>dummy_threading</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#psutil._compat">psutil._compat</a>
 
   </div>
 
@@ -5282,7 +6198,10 @@ imported by:
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#http">http</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#py_compile">py_compile</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#signal">signal</a>
  &#8226;   <a href="#socket">socket</a>
@@ -5305,6 +6224,9 @@ imported by:
  &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#multiprocessing.shared_memory">multiprocessing.shared_memory</a>
  &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#socket">socket</a>
  &#8226;   <a href="#ssl">ssl</a>
@@ -5322,6 +6244,7 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#keyboard._nixcommon">keyboard._nixcommon</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
 
@@ -5437,6 +6360,10 @@ imported by:
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#statistics">statistics</a>
  &#8226;   <a href="#tempfile">tempfile</a>
@@ -5802,14 +6729,14 @@ imports:
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
- &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#warnings">warnings</a>
 
   </div>
   <div class="import">
 imported by:
-    <a href="#importlib">importlib</a>
+    <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._abc">importlib._abc</a>
  &#8226;   <a href="#importlib._bootstrap">importlib._bootstrap</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
@@ -5936,7 +6863,6 @@ imports:
   <div class="import">
 imported by:
     <a href="#ctypes.util">ctypes.util</a>
- &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
@@ -6348,6 +7274,7 @@ imported by:
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
  &#8226;   <a href="#typing">typing</a>
@@ -6370,6 +7297,7 @@ imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
  &#8226;   <a href="#_compression">_compression</a>
  &#8226;   <a href="#bz2">bz2</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
  &#8226;   <a href="#csv">csv</a>
  &#8226;   <a href="#dis">dis</a>
  &#8226;   <a href="#email.feedparser">email.feedparser</a>
@@ -6786,6 +7714,8 @@ imported by:
 imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
  &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
  &#8226;   <a href="#dataclasses">dataclasses</a>
  &#8226;   <a href="#inspect">inspect</a>
 
@@ -6870,7 +7800,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#hashlib">hashlib</a>
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#hashlib">hashlib</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#tqdm.cli">tqdm.cli</a>
@@ -7911,6 +8848,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="numpy"></a>
+  <a target="code" href="" type="text/plain"><tt>numpy</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#comtypes._npsupport">comtypes._npsupport</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="opcode"></a>
   <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/opcode.py" type="text/plain"><tt>opcode</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -7982,6 +8930,14 @@ imported by:
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#ctypes._aix">ctypes._aix</a>
@@ -8033,6 +8989,10 @@ imported by:
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#posixpath">posixpath</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
@@ -8190,6 +9150,7 @@ imports:
 imported by:
     <a href="#keyboard">keyboard</a>
  &#8226;   <a href="#keyboard._canonical_names">keyboard._canonical_names</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#uuid">uuid</a>
 
   </div>
@@ -8266,6 +9227,151 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="psutil"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/psutil/__init__.py" type="text/plain"><tt>psutil</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._psutil_windows">psutil._psutil_windows</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
+ &#8226;   <a href="#pwd">pwd</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._psutil_windows">psutil._psutil_windows</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="psutil._common"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/psutil/_common.py" type="text/plain"><tt>psutil._common</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="psutil._compat"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/psutil/_compat.py" type="text/plain"><tt>psutil._compat</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#dummy_threading">dummy_threading</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#fcntl">fcntl</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#termios">termios</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#types">types</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="psutil._psutil_windows"></a>
+  <tt>psutil._psutil_windows</tt> <span class="moduletype"><tt>C:\Users\roger\AppData\Local\Programs\Python\Python312\Lib\site-packages\psutil\_psutil_windows.pyd</tt></span>  <div class="import">
+imports:
+    <a href="#psutil">psutil</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="psutil._pswindows"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/psutil/_pswindows.py" type="text/plain"><tt>psutil._pswindows</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._psutil_windows">psutil._psutil_windows</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#psutil">psutil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="pwd"></a>
   <a target="code" href="" type="text/plain"><tt>pwd</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -8274,6 +9380,7 @@ imported by:
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#posixpath">posixpath</a>
+ &#8226;   <a href="#psutil">psutil</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tarfile">tarfile</a>
@@ -8341,6 +9448,288 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="pycaw"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/__init__.py" type="text/plain"><tt>pycaw</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imported by:
+    <a href="#pycaw.api">pycaw.api</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/__init__.py" type="text/plain"><tt>pycaw.api</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#pycaw">pycaw</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.audioclient"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/audioclient/__init__.py" type="text/plain"><tt>pycaw.api.audioclient</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api">pycaw.api</a>
+ &#8226;   <a href="#pycaw.api.audioclient.depend">pycaw.api.audioclient.depend</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.audioclient.depend">pycaw.api.audioclient.depend</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.audioclient.depend"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/audioclient/depend.py" type="text/plain"><tt>pycaw.api.audioclient.depend</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.audiopolicy"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/audiopolicy/__init__.py" type="text/plain"><tt>pycaw.api.audiopolicy</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api">pycaw.api</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.endpointvolume"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/endpointvolume/__init__.py" type="text/plain"><tt>pycaw.api.endpointvolume</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api">pycaw.api</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.endpointvolume.depend"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/endpointvolume/depend.py" type="text/plain"><tt>pycaw.api.endpointvolume.depend</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.mmdeviceapi"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/mmdeviceapi/__init__.py" type="text/plain"><tt>pycaw.api.mmdeviceapi</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api">pycaw.api</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.mmdeviceapi.depend"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/mmdeviceapi/depend/__init__.py" type="text/plain"><tt>pycaw.api.mmdeviceapi.depend</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.api.mmdeviceapi.depend.structures"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/api/mmdeviceapi/depend/structures.py" type="text/plain"><tt>pycaw.api.mmdeviceapi.depend.structures</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.pycaw">pycaw.pycaw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.constants"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/constants.py" type="text/plain"><tt>pycaw.constants</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#pycaw">pycaw</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.pycaw">pycaw.pycaw</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.pycaw"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/pycaw.py" type="text/plain"><tt>pycaw.pycaw</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#pycaw">pycaw</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audioclient.depend">pycaw.api.audioclient.depend</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume.depend">pycaw.api.endpointvolume.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend">pycaw.api.mmdeviceapi.depend</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi.depend.structures">pycaw.api.mmdeviceapi.depend.structures</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pycaw.utils"></a>
+  <a target="code" href="///C:/Users/roger/AppData/Local/Programs/Python/Python312/Lib/site-packages/pycaw/utils.py" type="text/plain"><tt>pycaw.utils</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#pycaw">pycaw</a>
+ &#8226;   <a href="#pycaw.api.audioclient">pycaw.api.audioclient</a>
+ &#8226;   <a href="#pycaw.api.audiopolicy">pycaw.api.audiopolicy</a>
+ &#8226;   <a href="#pycaw.api.endpointvolume">pycaw.api.endpointvolume</a>
+ &#8226;   <a href="#pycaw.api.mmdeviceapi">pycaw.api.mmdeviceapi</a>
+ &#8226;   <a href="#pycaw.constants">pycaw.constants</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#pycaw.pycaw">pycaw.pycaw</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="pyexpat"></a>
   <tt>pyexpat</tt> <span class="moduletype"><tt>C:\Users\roger\AppData\Local\Programs\Python\Python312\DLLs\pyexpat.pyd</tt></span>  <div class="import">
 imported by:
@@ -8376,7 +9765,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#keyboard">keyboard</a>
+    <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#keyboard">keyboard</a>
  &#8226;   <a href="#keyboard._generic">keyboard._generic</a>
  &#8226;   <a href="#keyboard._nixcommon">keyboard._nixcommon</a>
  &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
@@ -8789,6 +10179,7 @@ imported by:
     <a href="#argparse">argparse</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#tqdm.cli">tqdm.cli</a>
@@ -8817,6 +10208,8 @@ imported by:
  &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
  &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
  &#8226;   <a href="#multiprocessing.resource_tracker">multiprocessing.resource_tracker</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#subprocess">subprocess</a>
 
   </div>
@@ -8849,6 +10242,8 @@ imported by:
  &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
  &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
  &#8226;   <a href="#ssl">ssl</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#uuid">uuid</a>
@@ -8957,6 +10352,7 @@ imported by:
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#posixpath">posixpath</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -9055,6 +10451,7 @@ imported by:
  &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
  &#8226;   <a href="#wave">wave</a>
@@ -9099,6 +10496,8 @@ imported by:
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#platform">platform</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
  &#8226;   <a href="#uuid">uuid</a>
@@ -9125,6 +10524,21 @@ imported by:
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes._npsupport">comtypes._npsupport</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._constants">comtypes.client._constants</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
+ &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
+ &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#ctypes._aix">ctypes._aix</a>
@@ -9182,6 +10596,10 @@ imported by:
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pprint">pprint</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pyi_rth_inspect.py">pyi_rth_inspect.py</a>
  &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
@@ -9277,7 +10695,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#ctypes.util">ctypes.util</a>
+    <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
@@ -9296,6 +10715,7 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#getpass">getpass</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#tqdm.utils">tqdm.utils</a>
 
   </div>
@@ -9313,6 +10733,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#argparse">argparse</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.metadata._adapters">importlib.metadata._adapters</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -9343,6 +10764,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#_threading_local">_threading_local</a>
+ &#8226;   <a href="#comtypes._comobject">comtypes._comobject</a>
+ &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#keyboard">keyboard</a>
  &#8226;   <a href="#keyboard._darwinkeyboard">keyboard._darwinkeyboard</a>
@@ -9362,6 +10785,9 @@ imported by:
  &#8226;   <a href="#multiprocessing.resource_tracker">multiprocessing.resource_tracker</a>
  &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#subprocess">subprocess</a>
@@ -9404,6 +10830,8 @@ imported by:
  &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
  &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#psutil">psutil</a>
+ &#8226;   <a href="#psutil._pswindows">psutil._pswindows</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#ssl">ssl</a>
@@ -9725,6 +11153,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
+ &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#keyboard._generic">keyboard._generic</a>
  &#8226;   <a href="#keyboard._nixkeyboard">keyboard._nixkeyboard</a>
@@ -9779,6 +11208,9 @@ imports:
 imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
+ &#8226;   <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#copy">copy</a>
  &#8226;   <a href="#csv">csv</a>
@@ -9802,6 +11234,7 @@ imported by:
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#pprint">pprint</a>
+ &#8226;   <a href="#psutil._compat">psutil._compat</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#tempfile">tempfile</a>
@@ -9834,7 +11267,17 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#functools">functools</a>
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes._memberspec">comtypes._memberspec</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
+ &#8226;   <a href="#comtypes.tools.typedesc">comtypes.tools.typedesc</a>
+ &#8226;   <a href="#comtypes.tools.typedesc_base">comtypes.tools.typedesc_base</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.metadata._meta">importlib.metadata._meta</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
@@ -10049,6 +11492,8 @@ imported by:
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#calendar">calendar</a>
+ &#8226;   <a href="#comtypes.tools.codegenerator">comtypes.tools.codegenerator</a>
+ &#8226;   <a href="#comtypes.tools.tlbparser">comtypes.tools.tlbparser</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#enum">enum</a>
  &#8226;   <a href="#getpass">getpass</a>
@@ -10071,7 +11516,9 @@ imported by:
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
+ &#8226;   <a href="#psutil._common">psutil._common</a>
  &#8226;   <a href="#pyaudio">pyaudio</a>
+ &#8226;   <a href="#pycaw.utils">pycaw.utils</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#re._parser">re._parser</a>
@@ -10139,6 +11586,7 @@ imports:
 imported by:
     <a href="#PyCoCo2Cass.py">PyCoCo2Cass.py</a>
  &#8226;   <a href="#_threading_local">_threading_local</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
  &#8226;   <a href="#copy">copy</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#logging">logging</a>
@@ -10160,7 +11608,8 @@ imported by:
   <a name="winreg"></a>
   <tt>winreg</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
+    <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
