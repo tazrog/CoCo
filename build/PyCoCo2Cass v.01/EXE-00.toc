@@ -1,4 +1,5 @@
-('C:\\Users\\roger\\Documents\\PyCoCo2Cass\\PyCoCo2Cass v.01.exe',
+('C:\\Users\\roger\\OneDrive\\Documents\\Python\\CoCo\\dist\\PyCoCo2Cass '
+ 'v.01.exe',
  True,
  False,
  False,
@@ -138,7 +139,7 @@
  [],
  False,
  False,
- 1704998989,
+ 1704999407,
  [('run.exe',
    'C:\\Users\\roger\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],
