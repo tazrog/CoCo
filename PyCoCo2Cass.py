@@ -97,13 +97,12 @@ def record():
             main()
         FILE_NAME=(BASE_DIR+"\\programs\\" + rfn)
         os.system('cls')
-        print ("RECORDING...")
-        
+        print ("RECORDING...")        
         print ("")
         print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
         print ("***********************************************************************************************")
         print (rfn)
-        print ("PRESS [q] to stop recording when CoCo is done saving.")
+        print ("***RECORDING NOW*** PRESS [q] to stop recording when CoCo is done saving.")
         audio=pyaudio.PyAudio() 
         stream=audio.open(format=FORMAT,channels=CHANNELS, 
             rate=RATE,
@@ -234,7 +233,7 @@ def list():
     print (("The program's file location is at %s") % BASE_DIR+  "\programs")
     print ("")
     fcnt = 0
-
+    
     #check for empty directory
     if len(os.listdir(BASE_DIR+"\\Programs")) < 1:
         print ("") 
@@ -244,28 +243,53 @@ def list():
     items = os.listdir(BASE_DIR+"\programs")
     fileList = [name for name in items if name.endswith(".wav")]
     for fcnt, fileName in enumerate(fileList, 1):
-        sys.stdout.write("[%d] %s\n\r" % (fcnt, fileName))
-    print ("The above files are not selectable")
+        sys.stdout.write("[%d] %s\n\r" % (fcnt, fileName))    
     print ("")
     print ("[99] Main Menu")
     print ("[9999] Delete program")
     print ("")
     while True:
-        choice = (input(">>> "))
+        choice = (input("Select WAV file [1-%s] to get Wav details. >>> "% fcnt))        
         try:
-            choice = int(choice)
-            if (choice == 99):
+            choice = int(choice)-1
+            if (choice+1 == 99):
                 main()
-            if (choice > 0 and choice < 9999):
-                print ("INVALID SELECTION")
-                time.sleep(1)
-                list()
+            if (choice < 9990):
+                if (choice > fcnt):
+                    print ("INVALID SELECTION")
+                    time.sleep(1)
+                    list()
         except ValueError:
             os.system('cls')
             print ("INVALID SELECTION")
             time.sleep(1)
             list()
-        if (choice == 9999):
+        if (choice < fcnt):
+            fn = (fileList[choice])
+            wavplay = BASE_DIR + "\\Programs\\"+ fn
+            f = wave.open(wavplay,"rb")
+            p = pyaudio.PyAudio()        
+            stream = p.open(format = p.get_format_from_width(f.getsampwidth()),  
+                channels = f.getnchannels(),  
+                rate = f.getframerate(),  
+                output = True)
+            frames = f.getnframes()
+            rate = f.getframerate()
+            duration = (round(frames/rate))
+            mins, secs = divmod(duration, 60)
+            os.system('cls')
+            print ("***FIle Information***")
+            print ("File Location %s"% wavplay) 
+            print ("")
+            print ("File name: %s"% fileName)
+            print ("Frame Rate: %d"% f.getframerate())  
+            print ("Frame Channel: %d"% f.getnchannels())  
+            print ('Duration = {:02d}:{:02d}'.format(mins, secs))  
+            print ("")      
+            print ("Returning to main list menu shortly.")
+            time.sleep(5)
+            list()
+        else:                    
             os.system('cls')
             print ("Welcome to CoCo python tape player and recorder.")
             print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
@@ -321,8 +345,7 @@ def settings():
         settings()
 
 def main():    
-    #interface
-    
+    #interface    
     os.system('cls')
     print ("Welcome to CoCo Python tape player and recorder on PC.")    
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
@@ -361,6 +384,7 @@ def main():
             print ("Not a valid option [%d]."% x)
             time.sleep (1)
             main()
+
 #Program Start
 os.system('cls')
 main()
