@@ -17,18 +17,16 @@ from tqdm import tqdm
 
 frame_rate = 9600
 # Make sure directories are set up.
+#if not os.path.exists("C:\\PyCoCo2Cass"):
+    #os.makedirs("C:\\PyCoCo2Cass") 
 
-if not os.path.exists("C:\\PyCoCo2Cass"):
-    os.makedirs("C:\\PyCoCo2Cass") 
-
-BASE_DIR = os.path.expanduser("C:\\PyCoCo2Cass")
+BASE_DIR = os.getcwd()
 if not os.path.exists(BASE_DIR+"\\Programs"):
     os.makedirs(BASE_DIR+"\\Programs") 
 
 def sound():
     devices = AudioUtilities.GetSpeakers()
-    interface = devices.Activate(
-        IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
     volume = interface.QueryInterface(IAudioEndpointVolume)
     #volume.GetMute()
     #volume.GetMasterVolumeLevel()
@@ -50,11 +48,9 @@ def record():
     CHUNK=1024
     RECORD_SECONDS=1
     wavitems = os.listdir(BASE_DIR+"\\Programs")
-    wavList = [wav for wav in wavitems if wav.endswith(".wav")]
-    
+    wavList = [wav for wav in wavitems if wav.endswith(".wav")]    
     for fcnt, wavName in enumerate(wavList, 1):
-        sys.stdout.write("[%d] %s\n\r" % (fcnt, wavName))          
-    
+        sys.stdout.write("[%d] %s\n\r" % (fcnt, wavName))      
     if len(os.listdir(BASE_DIR+"\\Programs")) < 1: 
         print ("[9999] New File Name")
         print ("")
@@ -63,7 +59,6 @@ def record():
         print ("[99] Main Menu")
         print ("[9999] New File Name")        
         print ("")
-
     print ("Type in your option [number] or a file [number] of a file you will like to override.")
     print ("")
     while True:
@@ -74,15 +69,12 @@ def record():
             os.system('cls')
             print ("INVALID SELECTION")
             time.sleep(1)
-            record() 
-        
+            record()        
         if (tapename == 99):
-            main() 
-            
+            main()            
         if (tapename == 9999):
             newname = input("Type new file name. Do not include .wav extension. >>> ")
-            rfn = newname +".wav"
-        
+            rfn = newname +".wav"        
         if (tapename > fcnt and tapename != 99):
             if (tapename != 9999):
                 os.system('cls')
@@ -96,16 +88,14 @@ def record():
             if (option != "y"):
                 print ("File override canceled")
                 time.sleep(1)
-                record()   
-        
+                record()        
         selection = input ("Enter the CSAVE command on the CoCo and press any key on the PC to start recording. \nAfter PC is recording execute CSAVE on PC. Enter x to exit. ")
         if (selection == "x"):
             print ("Program Exited")
             main()
-
         FILE_NAME=(BASE_DIR+"\\programs\\" + rfn)
         os.system('cls')
-        print ("RECORDING TAPE...")
+        print ("RECORDING...")
         print ("Press [q] to stop recording when CoCo is done saving.")
         print ("")
         print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
@@ -117,12 +107,9 @@ def record():
             input=True,
             frames_per_buffer=CHUNK)
         
-        #start recording  
-        
-        frames=[] 
-        
-        while True:                 
-            
+        #start recording         
+        frames=[]         
+        while True:           
             for i in range(0,int(RATE/CHUNK*RECORD_SECONDS)):
                 if keyboard.is_pressed('q'):  # if key 'q' is pressed 
                     print ("Stopping the recording")
@@ -146,8 +133,7 @@ def record():
                     wavfile.close()
                     os.system('cls')
                     print ("Tape recording done for file named:") 
-                    print (FILE_NAME)
-                    
+                    print (FILE_NAME)                    
                     time.sleep (3)
                     os.system('cls')
                     keyboard.send('backspace')
@@ -156,7 +142,8 @@ def record():
                 frames.append(data)   
 
 def playtape():
-    os.system('cls')  
+    os.system('cls') 
+    sound() 
     print ("Welcome to CoCo Python tape player and recorder on PC.")
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
@@ -168,25 +155,21 @@ def playtape():
         print("There are no files to play. Please record some.")
         time.sleep(2)
         main()
-
     chunk = 1024      
     fcnt =0 
     items = os.listdir(BASE_DIR+"\\Programs")
     fileList = [name for name in items if name.endswith(".wav")]
     for fcnt, fileName in enumerate(fileList, 1):
         sys.stdout.write("[%d] %s\n\r" % (fcnt, fileName))
-
     print ("")
     print ("[99] Main Menu")
     print ("")    
-    choice= (input("Select WAV file[1-%s] or main menu option: " % fcnt))
-    
+    choice= (input("Select WAV file[1-%s] or main menu [99] option: " % fcnt))    
     while True: 
         try:            
             choice = int(choice)-1
             if (choice > 95):
-                main()
-            
+                main()            
         except ValueError:
             os.system('cls')
             print ("INVALID SELECTION")
@@ -196,13 +179,11 @@ def playtape():
                 os.system('cls')
                 print ("INVALID SELECTION")
                 time.sleep(1)
-                playtape()             
-        
+                playtape()  
         fn = (fileList[choice])
         wavplay = BASE_DIR + "\\Programs\\"+ fn
         f = wave.open(wavplay,"rb")
-        p = pyaudio.PyAudio()     
-        
+        p = pyaudio.PyAudio()        
         stream = p.open(format = p.get_format_from_width(f.getsampwidth()),  
             channels = f.getnchannels(),  
             rate = f.getframerate(),  
@@ -218,25 +199,22 @@ def playtape():
         print ("Frame Channel: %d"% f.getnchannels())  
         print ('Duration = {:02d}:{:02d}'.format(mins, secs))
         print ("")
-        print ("*** For best results, please set PC sound volume between 54 to 58.*** ")
+        print ("*** Sound has been adjusted. Users may need to amke small adjstments as needed*** ")
         print ("Execute CLOAD on the CoCo and press enter when ready on the PC.")
-        print ("Or enter [99] Main Menu")
-        
+        print ("Or enter [99] Main Menu")        
         print ("")
         selection = (input(">>> ")) 
         if (selection == "99"):
-            main()
-                   
+            main()                   
         print (("Playing file >>> %s")% (fileList[choice]))
         print ("")
-        data = f.readframes(chunk) 
-        
+        data = f.readframes(chunk)        
         countdown= (round(frames/chunk)) + 1
+
         #play stream  
-        for i in tqdm(range(countdown),desc = "Load Progress:"): 
-            
+        for i in tqdm(range(countdown),desc = "Load Progress:"):             
             stream.write(data)  
-            data = f.readframes(chunk)          
+            data = f.readframes(chunk)        
   
         #stop stream        
         stream.stop_stream()  
@@ -245,8 +223,7 @@ def playtape():
         #close PyAudio  
         p.terminate() 
         print ("Tape Complete")        
-        main()  
-    
+        main()      
 
 def list():
     os.system('cls')
@@ -284,8 +261,7 @@ def list():
             os.system('cls')
             print ("INVALID SELECTION")
             time.sleep(1)
-            list()        
-
+            list()
         if (choice == 9999):
             os.system('cls')
             print ("Welcome to CoCo python tape player and recorder.")
@@ -321,7 +297,8 @@ def list():
                     os.system('cls')
                     print ("INVALID SELECTION")
                     time.sleep(1)
-                    list()    
+                    list()
+
 def settings():
     os.system('cls')
     print ("Settings")
@@ -340,17 +317,15 @@ def settings():
     else:
         settings()
 
-
 def main():    
     #interface
-    sound()
+    
     os.system('cls')
     print ("Welcome to CoCo Python tape player and recorder on PC.")    
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     print ("OPTIONS.")
-    print ("")
-    
+    print ("")    
     print ("[1] Play")
     print ("[2] Record")
     print ("[3] List/Delete Programs")
@@ -383,8 +358,6 @@ def main():
             print ("Not a valid option [%d]."% x)
             time.sleep (1)
             main()
-
+#Program Start
 os.system('cls')
 main()
-
-
