@@ -51,9 +51,10 @@ def record():
     wavList = [wav for wav in wavitems if wav.endswith(".wav")]    
     for fcnt, wavName in enumerate(wavList, 1):
         sys.stdout.write("[%d] %s\n\r" % (fcnt, wavName))      
-    if len(os.listdir(BASE_DIR+"\\Programs")) < 1: 
-        print ("[9999] New File Name")
-        print ("")
+    if len(os.listdir(BASE_DIR+"\\Programs")) < 1:
+        tapename = 9999 
+        #print ("[9999}New File Name")
+        #print ("")         
     else:
         print ("")
         print ("[99] Main Menu")
@@ -62,7 +63,8 @@ def record():
     print ("Type in your option [number] or a file [number] of a file you will like to override.")
     print ("")
     while True:
-        tapename = (input(">>> "))
+        if (len(os.listdir(BASE_DIR+"\\Programs")) > 0):
+            tapename = (input(">>> "))
         try:
             tapename = int(tapename)
         except ValueError:
@@ -89,18 +91,19 @@ def record():
                 print ("File override canceled")
                 time.sleep(1)
                 record()        
-        selection = input ("Enter the CSAVE command on the CoCo and press any key on the PC to start recording. \nAfter PC is recording execute CSAVE on PC. Enter x to exit. ")
+        selection = input ("Enter the CSAVE command on the CoCo and press any key on the PC to start recording. \nAfter PC is recording execute CSAVE on PC. Enter [x] to exit. ")
         if (selection == "x"):
             print ("Program Exited")
             main()
         FILE_NAME=(BASE_DIR+"\\programs\\" + rfn)
         os.system('cls')
         print ("RECORDING...")
-        print ("Press [q] to stop recording when CoCo is done saving.")
+        
         print ("")
         print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
-        print ("")
+        print ("***********************************************************************************************")
         print (rfn)
+        print ("PRESS [q] to stop recording when CoCo is done saving.")
         audio=pyaudio.PyAudio() 
         stream=audio.open(format=FORMAT,channels=CHANNELS, 
             rate=RATE,
@@ -198,12 +201,12 @@ def playtape():
         print ("Frame Rate: %d"% f.getframerate())  
         print ("Frame Channel: %d"% f.getnchannels())  
         print ('Duration = {:02d}:{:02d}'.format(mins, secs))
-        print ("")
-        print ("*** Sound has been adjusted. Users may need to amke small adjstments as needed*** ")
+        print ("**********************************************************************************************")
+        print ("*** Sound has been adjusted. Users may need to make small adjustments as needed*** ")
         print ("Execute CLOAD on the CoCo and press enter when ready on the PC.")
         print ("Or enter [99] Main Menu")        
         print ("")
-        selection = (input(">>> ")) 
+        selection = (input("[Enter] to play Wav once CLOAD is executed on the CoCo >>> ")) 
         if (selection == "99"):
             main()                   
         print (("Playing file >>> %s")% (fileList[choice]))

@@ -1,4 +1,4 @@
-('C:\\Users\\roger\\OneDrive\\Documents\\Python\\CoCo\\build\\PyCoCo2Cass '
+('C:\\Users\\roger\\Documents\\Python\\CoCo\\build\\PyCoCo2Cass '
  'v.01\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\roger\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\__future__.py',
