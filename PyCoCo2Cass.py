@@ -16,9 +16,6 @@ import time
 from tqdm import tqdm
 
 frame_rate = 9600
-# Make sure directories are set up.
-#if not os.path.exists("C:\\PyCoCo2Cass"):
-    #os.makedirs("C:\\PyCoCo2Cass") 
 
 BASE_DIR = os.getcwd()
 if not os.path.exists(BASE_DIR+"\\Programs"):
@@ -27,17 +24,18 @@ if not os.path.exists(BASE_DIR+"\\Programs"):
 def sound():
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    global volume
+    global soundlevel
+    
     volume = interface.QueryInterface(IAudioEndpointVolume)
-    #volume.GetMute()
-    #volume.GetMasterVolumeLevel()
-    #volume.GetVolumeRange()
-    #Set PC Sound to 55.
+    #Set PC Sound to 55.    
+    soundlevel = volume.GetMasterVolumeLevel()    
     volume.SetMasterVolumeLevel(-9.0, None)
 
 def record():
     os.system('cls')
     print ("Welcome to CoCo Python tape player and recorder on PC.")
-    print (("The program's file location is at %s") % BASE_DIR+  "\Programs")
+    print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     print ("RECORDING SECTION")
     print ("")
@@ -145,16 +143,17 @@ def record():
 
 def playtape():
     os.system('cls') 
-    sound() 
+    sound()    
     print ("Welcome to CoCo Python tape player and recorder on PC.")
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     print ("PLAYING TAPE SECTION")
 
     #check for empty directory
-    if len(os.listdir(BASE_DIR+"\programs")) < 1: 
+    if len(os.listdir(BASE_DIR+"\\programs")) < 1: 
         print ("")
         print("There are no files to play. Please record some.")
+        volume.SetMasterVolumeLevel(soundlevel, None)
         time.sleep(2)
         main()
     chunk = 1024      
@@ -224,13 +223,14 @@ def playtape():
 
         #close PyAudio  
         p.terminate() 
-        print ("Tape Complete")        
+        print ("Tape Complete")   
+        volume.SetMasterVolumeLevel(soundlevel, None)
         main()      
 
 def list():
     os.system('cls')
     print ("Welcome to PyCoCo2Cass tape player and recorder on PC.")
-    print (("The program's file location is at %s") % BASE_DIR+  "\programs")
+    print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     fcnt = 0
     
@@ -240,7 +240,7 @@ def list():
         print("There are no files to list. Please record some.")
         time.sleep(2)
         main()
-    items = os.listdir(BASE_DIR+"\programs")
+    items = os.listdir(BASE_DIR+"\\Programs")
     fileList = [name for name in items if name.endswith(".wav")]
     for fcnt, fileName in enumerate(fileList, 1):
         sys.stdout.write("[%d] %s\n\r" % (fcnt, fileName))    
@@ -278,17 +278,16 @@ def list():
             duration = (round(frames/rate))
             mins, secs = divmod(duration, 60)
             os.system('cls')
-            print ("***FIle Information***")
+            print ("***File Information***")
             print ("File Location %s"% wavplay) 
             print ("")
-            print ("File name: %s"% fileName)
+            print ("File name: %s"% fn)
             print ("Frame Rate: %d"% f.getframerate())  
             print ("Frame Channel: %d"% f.getnchannels())  
             print ('Duration = {:02d}:{:02d}'.format(mins, secs))  
-            print ("")      
-            print ("Returning to main list menu shortly.")
-            time.sleep(5)
-            list()
+            print ("")                    
+            a = input("Press any key to go back to the list menu. ")
+            list()            
         else:                    
             os.system('cls')
             print ("Welcome to CoCo python tape player and recorder.")
@@ -324,9 +323,10 @@ def list():
                     os.system('cls')
                     print ("INVALID SELECTION")
                     time.sleep(1)
-                    list()
+                    list()                    
 
 def settings():
+    #in beta
     os.system('cls')
     print ("Settings")
     print ("OPTIONS")   
