@@ -25,15 +25,17 @@ if not os.path.exists(BASE_DIR+"\\Programs"):
     os.makedirs(BASE_DIR+"\\Programs") 
 
 def sound():
+    global soundlevel
+    global volume
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)    
-    global volume
     volume = interface.QueryInterface(IAudioEndpointVolume)
-    global soundlevel
-
-    #Set PC Sound to 55.    
-    soundlevel = volume.GetMasterVolumeLevel()    
-    volume.SetMasterVolumeLevel(auto_sound_level, None)
+    if (auto_sound == 0):
+        soundlevel = volume.GetMasterVolumeLevelScalar() * 100
+    #Set PC Sound to 55 if auto=sound is on.
+    if (auto_sound == 1):
+        soundlevel= volume.GetMasterVolumeLevel()   
+        volume.SetMasterVolumeLevel(auto_sound_level, None)        
 
 def record():
     os.system('cls')
@@ -146,8 +148,7 @@ def record():
 
 def playtape():
     os.system('cls') 
-    if (auto_sound == 1):
-        sound()  
+    sound()
     print ("Welcome to CoCo Python tape player and recorder on PC.")
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
@@ -174,12 +175,6 @@ def playtape():
         try:            
             choice = int(choice)-1
             if (choice > 95):
-                #stop stream        
-                stream.stop_stream()  
-                stream.close()  
-
-                #close PyAudio  
-                p.terminate()
                 main()            
         except ValueError:
             os.system('cls')
@@ -217,18 +212,18 @@ def playtape():
                     print ("Auto Sound level is at 50 percent.")
                 if (auto_sound_level == -7.6):
                     print ("Auto Sound level is at 60 percent.") 
-        else:
+        if (auto_sound == 0):
+            sound()
             print ("Auto-sound is off")
-        print ("**********************************************************************************************")
+            print ("PC audio level is set to %d percent"% (soundlevel + 1))
+            print ("**********************************************************************************************")
         print ("Execute CLOAD on the CoCo and press enter when ready on the PC.")
         print ("Or enter [99] Main Menu")        
         print ("")
         selection = (input("[Enter] to play Wav once CLOAD is executed on the CoCo >>> ")) 
-        if (selection == "99"):
-            #stop stream        
+        if (selection == "99"):                 
             stream.stop_stream()  
             stream.close() 
-            #close PyAudio  
             p.terminate()
             f.close()
             main()                   
@@ -368,10 +363,28 @@ def settings():
     setinput=int(input(">>> "))    
     if (setinput == 1):
         os.system('cls')
-        print ("Current Recording Frame Rate is : %d" % frame_rate)
-        frame_rate = input("Type in number recording frame rate: ")
+        print ("Current Recording Frame Rate \(Baud\) is : %d" % frame_rate)
+        print ("Frame Rate Options:")
+        print ("[1] 1500")
+        print ("[2] 9600")
+        print ("[3] 44100")
+        print ("[4] 48000")
+        
+        print ("")
+        b= input(">>> ")
+        if (b== "1"):
+            frame_rate = 1500
+        if (b == "2"):
+            frame_rate = 9600
+        if (b=="3"):
+            frame_rate = 44100
+        if (b == "4"):
+            frame_rate = 48000
+        
         frame_rate = int(frame_rate)
+        print ("")
         print ("New fram rate is %d: "% frame_rate)
+        c = input ("Press any key to go to main menu")
         main()
     elif (setinput == 2):
         os.system('cls')
@@ -386,52 +399,48 @@ def settings():
         if (auto_sound_level == -7.6):
             print ("Auto Sound level is at 60 percent.")
         print ("")
-        
-        print ("[1] Adjust auto-sound settings.")
-        print ("[2] Adjust auto-sound setting to 50 percent.")
-        print ("[3] Adjust auto-sound setting to 55 percent *recommeded.")
-        print ("[4] Adjust auto-sound setting to 60 percent.")
-        print ("[99] Return to settings menu.")
+        print ("[1] Turn on auto-sound.")
+        print ("[2] Turn off auto-sound.")
+        print ("[3] Adjust auto-sound setting to 50 percent.")
+        print ("[4] Adjust auto-sound setting to 55 percent *recommeded.")
+        print ("[5] Adjust auto-sound setting to 60 percent.")
+        print ("")
+        print ("Any other key to go to Main Menu")
         print ("")
         a = (input (">>> "))
         if (a == "1"):
-            print ("[1] Turn on auto-sound.")
-            print ("[2] Turn off auto-sound.")
-            b = input (">>> ")
-            if (b == "1"):
-                auto_sound = 1
-                auto_sound = int(auto_sound)
-                print (" Auto sound is on")
-                c = input("Press any key to go to setting menu. ")
-                settings()
-            if ( b == "2"):
-                auto_sound = 0
-                auto_sound = int(auto_sound)
-                print (" Auto sound is off")
-                c = input("Press any key to go to setting menu. ")
-                settings()
-        if (a =="2"):
+            auto_sound = 1
+            auto_sound = int(auto_sound)
+            print (" Auto sound is on")
+            c = input("Press any key to go to setting menu. ")
+            settings()
+        if ( a == "2"):
+            auto_sound = 0
+            auto_sound = int(auto_sound)
+            print (" Auto sound is off")
+            c = input("Press any key to go to setting menu. ")
+            settings()
+        if (a =="3"):
             auto_sound_level = -10.5
             auto_sound_level = float(auto_sound_level)
             print ("Sound level set to 50 percent.")
             c = input("Press any key to go to setting menu. ")
             settings()
-        if (a == "3"):
+        if (a == "4"):
             auto_sound_level = -9.0
             auto_sound_level = float(auto_sound_level)
             print ("Sound level set to 55 percent.")
             c = input("Press any key to go to setting menu. ")
             settings()
-        if (a == "4"):
+        if (a == "5"):
             auto_sound_level = -7.6
             auto_sound_level = float(auto_sound_level)
             print ("Sound level set to 60 percent.")
             c = input("Press any key to go to setting menu. ")
             settings()
-        if (a == "99"):
-            settings()
+       
         else:
-            settings()
+            main()
 
     else:
         main()
