@@ -14,23 +14,26 @@ import sys
 import keyboard
 import time
 from tqdm import tqdm
-
+global frame_rate
+global auto_sound
+global auto_sound_level
 frame_rate = 9600
-
+auto_sound =1
+auto_sound_level = -9.0
 BASE_DIR = os.getcwd()
 if not os.path.exists(BASE_DIR+"\\Programs"):
     os.makedirs(BASE_DIR+"\\Programs") 
 
 def sound():
     devices = AudioUtilities.GetSpeakers()
-    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)    
     global volume
-    global soundlevel
-    
     volume = interface.QueryInterface(IAudioEndpointVolume)
+    global soundlevel
+
     #Set PC Sound to 55.    
     soundlevel = volume.GetMasterVolumeLevel()    
-    volume.SetMasterVolumeLevel(-9.0, None)
+    volume.SetMasterVolumeLevel(auto_sound_level, None)
 
 def record():
     os.system('cls')
@@ -93,7 +96,7 @@ def record():
         if (selection == "x"):
             print ("Program Exited")
             main()
-        FILE_NAME=(BASE_DIR+"\\programs\\" + rfn)
+        FILE_NAME=(BASE_DIR+"\\Programs\\" + rfn)
         os.system('cls')
         print ("RECORDING...")        
         print ("")
@@ -143,14 +146,15 @@ def record():
 
 def playtape():
     os.system('cls') 
-    sound()    
+    if (auto_sound == 1):
+        sound()  
     print ("Welcome to CoCo Python tape player and recorder on PC.")
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
     print ("PLAYING TAPE SECTION")
 
     #check for empty directory
-    if len(os.listdir(BASE_DIR+"\\programs")) < 1: 
+    if len(os.listdir(BASE_DIR+"\\Programs")) < 1: 
         print ("")
         print("There are no files to play. Please record some.")
         volume.SetMasterVolumeLevel(soundlevel, None)
@@ -170,6 +174,12 @@ def playtape():
         try:            
             choice = int(choice)-1
             if (choice > 95):
+                #stop stream        
+                stream.stop_stream()  
+                stream.close()  
+
+                #close PyAudio  
+                p.terminate()
                 main()            
         except ValueError:
             os.system('cls')
@@ -199,13 +209,28 @@ def playtape():
         print ("Frame Rate: %d"% f.getframerate())  
         print ("Frame Channel: %d"% f.getnchannels())  
         print ('Duration = {:02d}:{:02d}'.format(mins, secs))
+        if (auto_sound == 1):
+                print ("Auto-sound is On")
+                if (auto_sound_level == -9.0):
+                    print ("Auto Sound level is at 55 percent.")
+                if (auto_sound_level == -10.5):
+                    print ("Auto Sound level is at 50 percent.")
+                if (auto_sound_level == -7.6):
+                    print ("Auto Sound level is at 60 percent.") 
+        else:
+            print ("Auto-sound is off")
         print ("**********************************************************************************************")
-        print ("*** Sound has been adjusted. Users may need to make small adjustments as needed*** ")
         print ("Execute CLOAD on the CoCo and press enter when ready on the PC.")
         print ("Or enter [99] Main Menu")        
         print ("")
         selection = (input("[Enter] to play Wav once CLOAD is executed on the CoCo >>> ")) 
         if (selection == "99"):
+            #stop stream        
+            stream.stop_stream()  
+            stream.close() 
+            #close PyAudio  
+            p.terminate()
+            f.close()
             main()                   
         print (("Playing file >>> %s")% (fileList[choice]))
         print ("")
@@ -221,10 +246,13 @@ def playtape():
         stream.stop_stream()  
         stream.close()  
 
-        #close PyAudio  
-        p.terminate() 
+        #close PyAudio 
+        
+        p.terminate()
+        f.close()  
         print ("Tape Complete")   
-        volume.SetMasterVolumeLevel(soundlevel, None)
+        if (auto_sound == 1):
+            volume.SetMasterVolumeLevel(soundlevel, None)
         main()      
 
 def list():
@@ -232,8 +260,7 @@ def list():
     print ("Welcome to PyCoCo2Cass tape player and recorder on PC.")
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
     print ("")
-    fcnt = 0
-    
+    fcnt = 0    
     #check for empty directory
     if len(os.listdir(BASE_DIR+"\\Programs")) < 1:
         print ("") 
@@ -284,10 +311,11 @@ def list():
             print ("File name: %s"% fn)
             print ("Frame Rate: %d"% f.getframerate())  
             print ("Frame Channel: %d"% f.getnchannels())  
-            print ('Duration = {:02d}:{:02d}'.format(mins, secs))  
-            print ("")                    
-            a = input("Press any key to go back to the list menu. ")
-            list()            
+            print ('Duration = {:02d}:{:02d}'.format(mins, secs)) 
+            print ("")
+            a = input ("Press enter to return to list menu. ")
+            list()
+              
         else:                    
             os.system('cls')
             print ("Welcome to CoCo python tape player and recorder.")
@@ -327,6 +355,9 @@ def list():
 
 def settings():
     #in beta
+    global frame_rate
+    global auto_sound
+    global auto_sound_level
     os.system('cls')
     print ("Settings")
     print ("OPTIONS")   
@@ -337,15 +368,77 @@ def settings():
     setinput=int(input(">>> "))    
     if (setinput == 1):
         os.system('cls')
-        print ("Current Recording Frame Rate is :")
+        print ("Current Recording Frame Rate is : %d" % frame_rate)
         frame_rate = input("Type in number recording frame rate: ")
         frame_rate = int(frame_rate)
+        print ("New fram rate is %d: "% frame_rate)
         main()
+    elif (setinput == 2):
+        os.system('cls')
+        if (auto_sound == 1):
+            print ("Auto-sound is On")
+        else:
+            print ("Auto-sound is off")
+        if (auto_sound_level == -9.0):
+            print ("Auto Sound level is at 55 percent.")
+        if (auto_sound_level == -10.5):
+            print ("Auto Sound level is at 50 percent.")
+        if (auto_sound_level == -7.6):
+            print ("Auto Sound level is at 60 percent.")
+        print ("")
+        
+        print ("[1] Adjust auto-sound settings.")
+        print ("[2] Adjust auto-sound setting to 50 percent.")
+        print ("[3] Adjust auto-sound setting to 55 percent *recommeded.")
+        print ("[4] Adjust auto-sound setting to 60 percent.")
+        print ("[99] Return to settings menu.")
+        print ("")
+        a = (input (">>> "))
+        if (a == "1"):
+            print ("[1] Turn on auto-sound.")
+            print ("[2] Turn off auto-sound.")
+            b = input (">>> ")
+            if (b == "1"):
+                auto_sound = 1
+                auto_sound = int(auto_sound)
+                print (" Auto sound is on")
+                c = input("Press any key to go to setting menu. ")
+                settings()
+            if ( b == "2"):
+                auto_sound = 0
+                auto_sound = int(auto_sound)
+                print (" Auto sound is off")
+                c = input("Press any key to go to setting menu. ")
+                settings()
+        if (a =="2"):
+            auto_sound_level = -10.5
+            auto_sound_level = float(auto_sound_level)
+            print ("Sound level set to 50 percent.")
+            c = input("Press any key to go to setting menu. ")
+            settings()
+        if (a == "3"):
+            auto_sound_level = -9.0
+            auto_sound_level = float(auto_sound_level)
+            print ("Sound level set to 55 percent.")
+            c = input("Press any key to go to setting menu. ")
+            settings()
+        if (a == "4"):
+            auto_sound_level = -7.6
+            auto_sound_level = float(auto_sound_level)
+            print ("Sound level set to 60 percent.")
+            c = input("Press any key to go to setting menu. ")
+            settings()
+        if (a == "99"):
+            settings()
+        else:
+            settings()
+
     else:
-        settings()
+        main()
 
 def main():    
-    #interface    
+    #interface 
+   
     os.system('cls')
     print ("Welcome to CoCo Python tape player and recorder on PC.")    
     print (("The program's file location is at %s") % BASE_DIR+  "\\Programs")
@@ -355,7 +448,7 @@ def main():
     print ("[1] Play")
     print ("[2] Record")
     print ("[3] List/Delete Programs")
-    #print ("[0] Settings")
+    print ("[0] Settings")
     print ("")
     print ("[99] Quit")
     print ("")
@@ -368,8 +461,8 @@ def main():
             print ("INVALID OPTION [%s]"% x)
             time.sleep(1)
             main()
-        #if (x == 0):
-           # settings()
+        if (x == 0):
+            settings()
         if (x == 1):
             playtape()        
         if (x == 2):
